@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "576368280122",
+    "firebase_url": "https://cryptotracker-288cb.firebaseio.com",
+    "project_id": "cryptotracker-288cb",
+    "storage_bucket": "cryptotracker-288cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576368280122:android:3a6928215ef4d0a30d6b03",
+        "android_client_info": {
+          "package_name": "java.devcolibri.itvdn.com.cryptoccurencytracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576368280122-t74augmifojlntc0g122mm24rrpel222.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "java.devcolibri.itvdn.com.cryptoccurencytracker",
+            "certificate_hash": "3c40e9465a76da2485b93a0f19221c831bfe3dba"
+          }
+        },
+        {
+          "client_id": "576368280122-8q608lr3lp1eqolo0lq6dvumkt8fjmv6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmj0nZ_TUTtq_0NPF6mFqbeaQij93IuiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576368280122-8q608lr3lp1eqolo0lq6dvumkt8fjmv6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
