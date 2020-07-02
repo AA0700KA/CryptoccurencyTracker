@@ -34,54 +34,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val sslcontext = SSLContext.getInstance("TLSv1")
-//        sslcontext.init(null, null, null)
-//        val NoSSLv3Factory = NoSSLv3SocketFactory(sslcontext.getSocketFactory())
-//
-//        HttpsURLConnection.setDefaultSSLSocketFactory(NoSSLv3Factory)
-
-
         mAdapter = CryptoAdapter()
-
-        val firebaseDatabase = FirebaseDatabase.getInstance().reference
-
-        firebaseDatabase.child("currency").child("ABBC").addValueEventListener(object: ValueEventListener{
-            override fun onCancelled(error: DatabaseError) {
-                Log.d(TAG, "onCancelled: ${error}")
-            }
-
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val value = snapshot.value
-                Log.d(TAG, "onDataChange: ${value}")
-            }
-
-        })
-
 
         recycler_view.adapter = mAdapter
         recycler_view.layoutManager = LinearLayoutManager(this)
 
         updateAndroidSecurityProvider()
 
-
-
-//        val spec = ConnectionSpec.Builder(ConnectionSpec.COMPATIBLE_TLS)
-//            .tlsVersions(TlsVersion.TLS_1_2, TlsVersion.TLS_1_1, TlsVersion.TLS_1_0)
-//            .cipherSuites(
-//                CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
-//                CipherSuite.TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,
-//                CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,
-//                CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
-//            )
-//            .build()
-//
-//        val builder = OkHttpClient.Builder()
-//            .connectionSpecs(Collections.singletonList(spec))
-
-//        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-//            Log.e(TAG, "onCreate: Version Lower than 5.0" )
-//            HttpsURLConnection.setDefaultSSLSocketFactory(TLSSocketFactory())
-//        }
 
         client = OkHttpClient()
 
@@ -117,10 +76,6 @@ class MainActivity : AppCompatActivity() {
                         mAdapter.update(mCryptocurrecncies)
                     })
 
-
-//                    for (cryptocurrency in cryptocurrencies) {
-//                        Log.d(TAG, "${cryptocurrency.id}, ${cryptocurrency.name}, ${cryptocurrency.symbol}, ${cryptocurrency.quote!!.USD!!.price}")
-//                    }
                 }
             })
     }
